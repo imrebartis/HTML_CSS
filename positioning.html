@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Positioning_exercise</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+     	}
+     #positioned {
+		  position: absolute;
+		  top: 20px;
+		  left: 50%;
+		  /* Add a z-index greater than the elements you want to appear on top of */
+  		  z-index: 2;
+		  padding: 30px 15px;
+		  margin-left: -200px;
+		  background: #ffffcc;
+		  width: 400px;
+		  box-sizing: border-box;
+		  }
+	 #positioned span {
+		  position: absolute;
+		  top: -10px;
+		  left: -10px;
+		  width: 20px;
+		  height: 20px;
+		  background: #fcfc99;
+		  }
+	 #fixed {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100vw; /*fits 100% of the width*/
+		  height: 100vh; /*fits 100% of the height*/
+		  z-index: 1;
+		  background: rgba(0, 0, 0, .6);
+		  }
+  </style>
+  </head>
+  <body>
+    <section>
+  		<p>Pickled activated charcoal tumeric, tbh banjo tacos dreamcatcher austin paleo humblebrag affogato actually woke franzen wayfarers.  Cardigan lumbersexual put a bird on it chartreuse bitters poutine.  Woke cred cardigan, photo booth brooklyn before they sold out leggings.  Dreamcatcher vegan tousled bespoke, health goth hella vice copper mug fam selvage meh 90's etsy quinoa fingerstache.  Mumblecore squid heirloom flexitarian selfies, iceland hexagon shabby chic typewriter la croix.  Artisan +1 twee, cornhole fixie 8-bit bespoke paleo unicorn poutine cray pickled sustainable brooklyn banh mi.  Cliche viral asymmetrical, bitters thundercats forage affogato poke lyft iPhone godard.</p>
+
+  		<p>Single-origin coffee listicle shabby chic scenester coloring book bespoke farm-to-table, pour-over heirloom copper mug.  Unicorn enamel pin bespoke, bushwick blue bottle fingerstache trust fund.  Single-origin coffee street art keffiyeh godard.  Direct trade  enamel pin cold-pressed ugh church-key live-edge.  Letterpress brunch wolf pork belly direct trade.  Hammock gluten-free meggings blog, fam pitchfork offal green juice sartorial.  Helvetica retro paleo taxidermy fixie.</p>
+
+  		<p>Blog glossier +1, fanny pack poutine activated charcoal pinterest pug yuccie swag photo booth intelligentsia etsy health goth.  Kickstarter celiac sriracha twee.  Vice celiac narwhal, pop-up marfa waistcoat selfies vape lomo gentrify.  Meditation lumbersexual selfies deep v, lyft gentrify iceland meggings fashion axe pickled.  Butcher chia freegan organic franzen, next level fam chillwave irony skateboard sustainable.  Fanny pack try-hard craft beer, mlkshk YOLO tilde fam.  Pok pok keytar umami, forage before they sold out 8-bit kogi heirloom kombucha.</p>
+
+  		<p>Raw denim fixie semiotics, gentrify unicorn af pour-over meditation.  Prism locavore meditation, beard artisan semiotics lomo edison bulb try-hard glossier pop-up polaroid yr fixie mustache.  Trust fund ethical succulents, chartreuse flannel brooklyn food truck forage.  Mustache intelligentsia art party swag, retro paleo 90's cred pop-up.  Bitters keffiyeh portland, jean shorts messenger bag tumeric enamel pin ethical unicorn shabby chic man braid church-key.  Selfies microdosing lomo raclette, next level roof party marfa four loko vexillologist.  Photo booth organic tbh wayfarers try-hard chillwave typewriter jean shorts.</p>
+
+  		<p>Pickled activated charcoal tumeric, tbh banjo tacos dreamcatcher austin paleo humblebrag affogato actually woke franzen wayfarers.  Cardigan lumbersexual put a bird on it chartreuse bitters poutine.  Woke cred cardigan, photo booth brooklyn before they sold out leggings.  Dreamcatcher vegan tousled bespoke, health goth hella vice copper mug fam selvage meh 90's etsy quinoa fingerstache.  Mumblecore squid heirloom flexitarian selfies, iceland hexagon shabby chic typewriter la croix.  Artisan +1 twee, cornhole fixie 8-bit bespoke paleo unicorn poutine cray pickled sustainable brooklyn banh mi.  Cliche viral asymmetrical, bitters thundercats forage affogato poke lyft iPhone godard.</p>
+
+  		<p>Single-origin coffee listicle shabby chic scenester coloring book bespoke farm-to-table, pour-over heirloom copper mug.  Unicorn enamel pin bespoke, bushwick blue bottle fingerstache trust fund.  Single-origin coffee street art keffiyeh godard.  Direct trade  enamel pin cold-pressed ugh church-key live-edge.  Letterpress brunch wolf pork belly direct trade.  Hammock gluten-free meggings blog, fam pitchfork offal green juice sartorial.  Helvetica retro paleo taxidermy fixie.</p>
+
+  		<p>Blog glossier +1, fanny pack poutine activated charcoal pinterest pug yuccie swag photo booth intelligentsia etsy health goth.  Kickstarter celiac sriracha twee.  Vice celiac narwhal, pop-up marfa waistcoat selfies vape lomo gentrify.  Meditation lumbersexual selfies deep v, lyft gentrify iceland meggings fashion axe pickled.  Butcher chia freegan organic franzen, next level fam chillwave irony skateboard sustainable.  Fanny pack try-hard craft beer, mlkshk YOLO tilde fam.  Pok pok keytar umami, forage before they sold out 8-bit kogi heirloom kombucha.</p>
+
+  		<p>Raw denim fixie semiotics, gentrify unicorn af pour-over meditation.  Prism locavore meditation, beard artisan semiotics lomo edison bulb try-hard glossier pop-up polaroid yr fixie mustache.  Trust fund ethical succulents, chartreuse flannel brooklyn food truck forage.  Mustache intelligentsia art party swag, retro paleo 90's cred pop-up.  Bitters keffiyeh portland, jean shorts messenger bag tumeric enamel pin ethical unicorn shabby chic man braid church-key.  Selfies microdosing lomo raclette, next level roof party marfa four loko vexillologist.  Photo booth organic tbh wayfarers try-hard chillwave typewriter jean shorts.</p>
+	</section>
+
+	<div id="fixed"></div>
+	<div id="positioned"><span></span>I'm positioned!</div>
+  </body>
+</html>
