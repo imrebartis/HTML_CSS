@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Def list form</title>
+    <meta charset="UTF-8" />
+    <style>
+      .styled_form.horizontal dt,
+      .styled_form.horizontal dd {
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .styled_form.horizontal dt {
+        width: 15%;
+        padding-right: 20px;
+      }
+      .styled_form.horizontal dd {
+        width: 75%;
+      }
+      .styled_form.horizontal input[type="text"] {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="styled_form horizontal">
+    <dl>
+      <dt>
+        <label for="example_2">Name</label>
+      </dt><!--
+      --><dd>
+        <input type="text" id="example_2" />
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <label for="example_3">Title</label>
+      </dt><!--
+      --><dd>
+        <input type="text" id="example_3" />
+      </dd>
+    </dl>
+  </div>
+  </body>
+</html>
