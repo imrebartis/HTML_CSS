@@ -33,12 +33,23 @@ ul{
 	list-style: none;
 	font-size: 14px;
 }
-.inline-block {
-	display: inline-block;
-	margin-right: 1em;
+dl.partial {
+  display: inline-block;
+  padding-right: 1.25rem;
+  padding-left: 2rem;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+dl.third {
+  width: 33.3%;
+}
+dl.last { padding-right: 0; }
+.st{
+	margin: 1rem -3rem 0 2rem;
+}
+#state{
+	margin-top: .41rem;
 }
 #zip {
-	display: block;
-	width: 20%;
-	margin: -4em 0 0 30em;
+	width: 60%;
 }
