@@ -1,0 +1,55 @@
+/* liquid layout using float + overflow */
+
+#content,
+#sidebar {
+  padding: 20px 30px;
+}
+
+#content {
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  background: #cacaca;
+
+}
+
+#sidebar {
+  overflow: auto; /* the sidebar will take up the remaining width of the browser, no matter what width #content is */
+  background: #dedede;
+}
+
+/*making the  layout fluid, i.e. preventing the page from getting too wide or cramped */
+/*main {
+  min-width: 600px;
+  max-width: 1400px;
+}*/
+
+/* liquid layout using only float */
+/*
+
+#content,
+#sidebar {
+  float: left;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+#content {
+  width: 70%;
+  background: #cacaca;
+}
+
+#sidebar {
+  width: 30%;
+  background: #dedede;
+}
+*/
+
+/* NB: We can set overflow on the sidebar to hidden or auto to achieve the same effect.
+With overflow: hidden, if anything inside the container is positioned outside of the box 
+that makes up the parent, it will be cropped and any parts not inside the parent will
+ be hidden from view. With overflow: auto, you won't have the content cut off but you may have horizontal
+  and vertical scroll bars appear depending on the browser and whether or not there is also a fixed
+   height on the container. If your sidebar is 300px wide and you have a 500px image, you'll see
+    a horizontal scrollbar appear within the sidebar. Make sure you know the drawbacks to both 
+    techniques before employing them. */

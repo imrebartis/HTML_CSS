@@ -15,15 +15,17 @@ a {
 }
 
 .column {
-  width: 1000px;
+  max-width: 1000px; /*this is max-width because otherwise it won't take up the whole screen width in media queries */
   margin: 0 auto;
 }
 
 nav {
-  padding: 25px 0 60px 0;
+  padding: 0 0 35px 0;
   font-size: 24px;
   text-transform: uppercase;
 }
+
+nav ul { padding: 0; }
 
 nav li {
   display: inline;
@@ -44,12 +46,16 @@ main {
   background: #ffffff;
 }
 
-h1 {
-  padding: 0 0 75px 0;
+h1 a {
+  display: block;
+  width: 298px;
+  height: 243px;
+  margin: 0 auto 50px auto;
+  text-indent: -9000px; /* getting rid of the h1 a text */
+  background: transparent url("images/logo.png") 0 0 no-repeat;
 }
 
 h2 {
-  padding: 0 0 40px 0;
   font-size: 36px;
   font-weight: 600; /* 600 = bold */
 }
@@ -59,11 +65,10 @@ h2:after {
   padding: 0 24px;
   font-size: 22px;
   vertical-align: 5px;
-  content: "\2022"; /* this is an unicode property for bullets */
+  content: "\2022"; /* this is a unicode property for bullets */
 }
 
 h3 {
-  padding: 0 0 20px 0;
   font-size: 24px;
   color: #3e59b2;
 }
@@ -71,6 +76,11 @@ h3 {
 article {
   padding: 0 110px 100px 110px;
 }
+
+
+ article p {
+    text-align: justify; /* makes the indents at both sides of the article dissapear */
+  }
 
 footer {
   padding: 75px 0;
@@ -108,7 +118,7 @@ footer li a.instagram { background-position: 0 -138px; }
   padding: 0 0 50px 0;
 }
 
-#projects article + article {
+#projects article + article { /* '+' selects the articles placed immediately after projects article */
   padding-top: 60px;
 }
 
@@ -123,17 +133,19 @@ footer li a.instagram { background-position: 0 -138px; }
 }
 
 #projects figure img {
-  display: block; /* this will add some spacing at the bottom of the img */
+  display: block; /* img elements are display: inline by default, so we change this to display: block to make sure they do not exhibit extra bottom padding due to the inherited line height (inline elements are subject to line height and vertical alignment, while block elements are not) */
   width: 100%;
 }
 
 #team article {
-  padding: 0 0 225px 0;
+  padding: 0 0 100px 0;
 }
 
 #team p {
   padding: 0 110px 100px 110px;
 }
+
+#team ul { padding: 0; }
 
 #team li {
   display: inline-block;
@@ -146,57 +158,114 @@ footer li a.instagram { background-position: 0 -138px; }
   margin: 0 0 20px 0;
 }
 
-.modal_layer {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  background: rgba(0, 0, 0, .3);
+@media (max-width: 875px) {
+  #team li {
+    width: 48%;
+    padding: 0 0 30px 0;
+  }
+
+  #team li img {
+    margin: 0 auto;
+  }
+}
+/* Tablet design */
+@media (max-width: 768px) {
+  body {
+    padding-top: 45px;
+  }
+
+  h1 a {
+    width: 223px;
+    height: 182px;
+    margin-bottom: 30px;
+    background-size: cover; /* This scales the background image to be as large as possible so that the background area is completely covered by the background image */
+  }
+
+  nav {
+    padding-bottom: 50px;
+  }
+
+  main {
+    padding-top: 40px;
+  }
+
+  article {
+    padding: 0 40px 50px 40px;
+  }
+
+  footer {
+    padding: 35px 0;
+  }
+
+  footer li {
+    padding: 0 32px;
+  }
+
+  #projects article p {
+    padding: 0 30px;
+  }
 }
 
-.modal {
-  display: none;
-  position: absolute;
-  left: 50%;
-  z-index: 3;
-  width: 660px;
-  padding: 125px 70px 90px 85px;
-  margin: 0 0 0 -415px;
-  text-align: left;
-  background: #ffffff;
-}
+/* Mobile design */
 
-#team .modal p {
-  padding: 0;
-  font-size: 20px;
-}
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+    font-size: 16px;
+  }
 
-.modal a.close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  text-align: left;
-  text-indent: -8685px;
-  overflow: hidden;
-  background: transparent url("images/icon_close.png") 0 0 no-repeat;
-}
+  body > header { /* selects all header elements where the parent is the <body> element */
+    padding: 15px 20px;
+  }
 
-#team .modal img {
-  display: inline-block;
-  width: 96px;
-  margin: 0 30px 0 0;
-  vertical-align: middle;
-}
+ h1 {
+    float: left;
+    margin: 20px 0 0 0;
+  }
 
-.modal h3 {
-  display: inline-block;
-  font-size: 24px;
-  font-weight: normal;
-  vertical-align: middle;
+  h1 a {
+    width: auto; /* getting back to the default width of the element (otherwise it would be 298px) */
+    height: 40px; /* this is the height of the icon, i.e. it won't show the "Space Design" text below it */
+    padding: 10px 0 0 55px;
+    text-indent: 0; /* making the h1 a text visible */
+    font-size: 22px;
+    color: #ffffff;
+    background-position: -20px 0; /* -20px horizontally, 0 vertically */
+    background-size: 90px auto; /* 90px wide, auto height */
+  }
+
+  h2 { font-size: 26px; }
+
+  h2:before,
+  h2:after {
+    vertical-align: 0;
+  }
+
+  h3 { font-size: 22px; }
+
+  nav {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav li {
+    display: block;
+    padding: 5px 0;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+
+  footer li {
+    padding: 0 18px;
+  }
+
+  #team p {
+    padding: 0 30px 40px 30px;
+  }
 }
