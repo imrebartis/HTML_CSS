@@ -1,2 +1,2 @@
 # HTML_CSS
-A Launch School Project
+HTML and CSS exercises + notes
