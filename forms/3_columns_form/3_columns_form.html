@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <div class="styled_form">
+  <dl>
+    <dt>
+      <label for="name">Name</label>
+    </dt>
+    <dd>
+      <input type="text" id="name" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <label for="address1">Address</label>
+    </dt>
+    <dd>
+      <input type="text" id="address1" />
+      <input type="text" id="address2" />
+    </dd>
+  </dl>
+  <dl class="city partial">
+    <dt>
+      <label for="city">City</label>
+    </dt>
+    <dd>
+      <input type="text" id="city" />
+    </dd>
+  </dl><!--
+  --><dl class="state partial">
+    <dt>
+      <label for="state">State</label>
+    </dt>
+    <dd>
+      <select id="state">
+        <option>AK</option>
+        <option>AL</option>
+        <!-- rest of US states -->
+      </select>
+    </dd>
+  </dl><!--
+  --><dl class="zipcode partial">
+    <dt>
+      <label for="zipcode">Zip</label>
+    </dt>
+    <dd>
+      <input type="text" id="zipcode" />
+    </dd>
+  </dl>
+</div>
+  
+  </body>
+</html>
