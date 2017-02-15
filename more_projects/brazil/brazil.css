@@ -1,0 +1,396 @@
+@import url("../../whitespace-reset.css");
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    max-width: 1900px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+/*------------HEADER-------------*/
+nav {
+    position: fixed;
+    width: 100%;
+    background: #FFF;
+    border-top: 10px solid #F5F5F5;
+    border-bottom: 1px solid #EEE;
+    max-width: 1900px;
+    z-index: 1;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul {
+    text-align: center;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    color: #44444a;
+    padding: 15px 25px 18px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#title-div {
+  top: 55px;
+  height: 428px;
+  text-align: center;
+  background: url(http://2014.jsconfbr.org/images/front.jpg) 50% center no-repeat;
+  color: white;
+  font-size: 72px;
+  padding: 90px 0 40px 0;
+  line-height: 109%;
+}
+
+header h1 {
+    padding-top: 110px;
+    font-weight: 500;
+
+}
+
+header h3 {
+    font-size: 31px;
+    padding-bottom: 50px;
+    font-weight: 500;
+}
+
+
+/*------MAIN-------*/
+main h1, main p {
+  font-size: 48px;
+  text-align: center;
+  font-weight: lighter;
+  color: #444444;
+}
+
+main h1 {
+  margin: 0 0 0.5em 0;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 auto 11px;
+}
+
+section {
+    height: 100%;
+    padding: 75px 0 70px 0;
+  }
+
+section + section {
+    border-top: 1px solid #EEE;
+  }
+
+/*------------TICKETS SECTION-------------*/
+
+.button {
+  background: #008000;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  width: 17%;
+}
+
+section a[href] {
+  font-weight: 900;
+}
+
+.button:hover {
+    background-color: #205920;
+}
+
+/*------------SPEAKERS SECTION-------------*/
+
+
+#speakers li {
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    height: 380px;
+    margin-right: 5px;
+    vertical-align: top;
+    border: 2px solid #f5f5f5;
+    background: #fff;
+    text-align: center;
+}
+
+.hover-block {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, .9);
+    transition: all 0.5s; /*both padding and background will transition*/
+    width: 95%;
+}
+
+.speaker:hover .hover-block {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.speaker-block h2, .hover-block h2 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #377d22;
+}
+
+#speaker .speaker-block h2 {
+    margin: 30px auto 10px auto;
+}
+
+.hover-block h2 {
+    margin: 0;
+    padding: 0;
+}
+.speaker-block h3, .hover-block p {
+    text-align: center;
+    font-weight: 300;
+}
+
+.speaker-block h3 {
+    font: 300 15px/150% "Open Sans Light", sans-serif;
+
+}
+
+.speaker-block {
+  color:black;
+}
+
+.hover-block p {
+    font: 13px "Open Sans Light", sans-serif;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.hover-block a {
+    color: #377d22;
+    font-weight: 900;
+}
+
+.row {
+  padding: 0 170px;
+}
+
+/*------SCHEDULE SECTION-----*/
+#schedule a[href] {
+  font-size: 18px;
+  color: #008000;
+  text-decoration: none;
+}
+
+#schedule ul {
+  font-size: 24px;
+  font-weight: 400;
+  color: #444444;
+  width: 90%;
+  margin-left: 2.5em;
+  padding: 0.2em 0 0 2em;
+}
+
+#schedule ul + ul {
+  border-top: 1px solid #F5F5F5;
+}
+
+#schedule ul:nth-child(1) {
+  border-top: 1px solid #F5F5F5;
+}
+
+#schedule li {
+  display: inline-block;
+  padding: 5px 0;
+  vertical-align: middle;
+}
+
+#schedule li:nth-child(1n){
+  margin-left: -2em;
+  padding-right: 2.5em;
+}
+
+
+#schedule li:nth-child(2n) {
+  width: 85%;
+  padding-right: 2em;
+}
+
+#schedule li:nth-child(3n) {
+  padding-left: 0.2em;
+}
+
+#schedule ul:last-of-type {
+  border-bottom: 1px solid #F5F5F5;
+}
+
+img.schedule-image {
+  width: auto;
+  height: 105px;
+  margin-left: -5em;
+}
+
+#lynn, #dave {
+  padding-left: 0.7em;
+}
+
+.schedule-tag {
+  display: inline;
+  text-align: center;
+  padding: 1px 2px 0 2px;
+  font-size: 0.3em;
+  width: auto;
+  background: #eeeeee;
+  border: 1px solid #aaaaaa;
+  color: #717171;
+}
+
+/*-----LOCATION SECTION----*/
+
+#map {
+-webkit-overflow-scrolling: touch;
+overflow: auto;
+pointer-events: none;
+margin: 30px 0;
+}
+
+/*-----CALL FOR PAPERS SECTION----*/
+#call_for_papers {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#call_for_papers p  {
+  color: #444444;
+  padding: 0 25px 20px 25px;
+  text-align:left;
+  margin: 0 auto;
+  font: 300 16px/1.5 "Open Sans Light", sans-serif;
+}
+
+#cfp-button {
+  margin: 0;
+  padding: 0.6em 0.4em;
+  text-align: center;
+  width: 23%;
+}
+
+section#call_for_papers a#code {
+  color: #377d22;
+  font-weight: bold;
+}
+
+/*------------SPONSORS SECTION--------------*/
+
+    #sponsors {
+     max-width: 960px;
+     margin: 0 auto;
+}
+
+   #sponsors h3{
+    font: 500 20px "Open Sans Light", sans-serif;
+    text-align: left;
+    margin: 20px 0 10px 0;
+    padding: 0 25px;
+    font-weight: 500;
+    color: #444444;
+}
+
+#gold li {
+  display: inline-block;
+  width: 40%;
+}
+
+#silver img {
+  width: 17rem;
+}
+
+#silver::after, #support::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#support li {
+  display: inline-block;
+  padding-right: 2em;
+  margin-left: 2em;
+}
+
+#support li:nth-child(3) {
+  margin-right: -5%;
+}
+
+#support img {
+  width: 11rem;
+}
+
+/*------------FOOTER--------------*/
+footer {
+    background: url(http://2014.jsconfbr.org/images/people.jpg) 0 22% no-repeat;
+    background-size:cover;
+    max-width: 1900px;
+    height: 337px;
+    padding: 43px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+footer p {
+  font-weight: normal;
+}
+
+footer a {
+  color: #008000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer #presented_by {
+  display: block;
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+  margin: 15px auto;
+  font-weight: 100;
+  margin-top: -1.4rem;
+}
+
+  footer #js_teamtext {
+    font-size: 31px;
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 960px;
+}
+
+  footer #dark_div {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 190px;
+    color: #fff;
+    text-align: left;
+    padding: 12px 0 17px 47px;
+    max-width: 1900px;
+    padding-left: 14%;
+    margin-top: 2rem;
+    box-sizing: border-box;
+}
+
+  footer #twitter {
+    text-align: center;
+    margin: 0;
+    padding: 10px 1px;
+    font-size: 16px;
+    width: 14%;
+  }
